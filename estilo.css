@@ -1,0 +1,80 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	text-align:center;
+	bocakground:#E6E8FA;
+}
+
+header , footer , article , aside , nav , section {display:block}
+
+
+#site{
+	text-align:left;
+	margin:10px auto;
+	width:800px;
+}
+/* Parte de cima da página*/
+header#topo{
+	height:100px;
+	background:#345678;
+	color:#E6E8FA;
+	font-family:cursive;
+}
+/* Fundo do menu abaixo Head*/
+nav#menu{
+	height:30px;
+	background:#F1F1F1;
+	padding:10px;
+	color:#333333;
+}
+
+nav#menu ul li{
+	list-style: none;
+	display:inline;
+	margin:10px;
+}
+/* Contorno do conteúdo principal*/
+section#conteudo{
+	width: 500px;
+	height:600px;
+	float:left; 	
+	background:#F3F3F3;
+	padding:10px;
+	
+}
+/* Fundo da head do conteúdo principal*/
+section#conteudo header{
+	width: 500px;
+	height:28px;
+	background:#333333;
+	color:#CCCCCC;
+}
+/* Fundo do conteúdo principal*/
+section#conteudo article{
+	height:400px;
+	background:#FFFFFF;
+}
+
+section#conteudo footer{
+	background:#000000;
+	height:30px;	
+}
+/* Fundo do menu lateral*/
+aside{
+	background:#E6E8FA;	
+	height:620px;
+	width:280px;
+	float:left;
+}
+
+
+/* Fundo do rodapé*/
+footer{
+	background:#345678;
+	height:50px;
+	clear:both;
+	color:#E6E8FA;
+}

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Projeto PAS II</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+		<script language="JavaScript">
+			function valida(form) {
+				for(i = 0; i < form.length; i++){
+					if (form[i].value == ""){
+						var nome = form[i].name
+						alert("O campo " + nome + " é obrigatório.")
+						form[i].focus();
+						return false;
+					}				
+				}	
+			
+				var filtro_mail = /^.+@.+\..{2,3}$/
+				if (!filtro_mail.test(form.Email.value) || form.Email.value=="") {
+					alert("Preencha o e-mail corretamente.");
+					form.Email.focus();
+					return false;
+				}	
+				
+				if (form.Senha.value=="" || form.Senha.value.length < 6) {
+					alert("Preencha a senha corretamente.");
+					form.Senha.focus();
+					return false;
+				}
+
+				if (form.RepitaSenha.value=="" || form.RepitaSenha.value.length < 6) {
+					alert("Preencha a confirmação de senha corretamente.");
+					form.RepitaSenha.focus();
+					return false;
+				}
+				
+				if (form.Senha.value!=form.RepitaSenha.value) {
+					alert("A senha e a confirmação devem ser iguais.");
+					form.RepitaSenha.focus();
+					return false;
+				}
+				alert("Cadastro realizado com sucesso!");
+				window.location="home.html";
+				return true;
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<div id="site">
+			<header id="topo">
+				<h1>Projeto PAS II - Diego e Max</h1>
+			</header>
+			
+			<nav id="menu">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="bolao.html">Bolão</a></li>
+					<li><a href="ranking.html">Ranking</a></li>
+					<li><a href="apostas.html">Apostas</a></li>
+					<li><a href="resultados.html">Resultados dos Jogos</a></li>
+					<li><a href="perfil.html">Perfil</a></li>
+					<li><a href="TelaAdmin.html">Administrador</a></li>
+					<li><a href="mapa.html">Mapa do Site</a></li>
+				</ul>
+			</nav>
+			
+			<section id="conteudo">
+			
+				<header>
+					<h2>Cadastro</h2>
+				</header>			
+						
+				<body id="conteudo" >
+				
+					<form align="center" onsubmit="valida(this);" action="home.html">
+						Primeiro nome: 
+						<input align="center" type="text" name="Nome">
+						<br>
+						Ultimo nome: 
+						<input type="text" name="Ultimo Nome">
+						<br>
+						email: 
+						<input type="text" name="Email">
+						<br>
+						Senha: 
+						<input type="text" name="Senha">
+						<br>
+						Confirme a Senha: 
+						<input  type="text" name="RepitaSenha">
+						<br>
+						<input type = "submit" value="Enviar" >
+						
+					</form>
+					
+				</body>	
+			
+			</section>	
+			
+			<aside>
+			
+			</aside>		
+			<footer>
+				Diego e Max
+			</footer>		
+		</div>
+	</body>
+
+</html>
