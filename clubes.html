@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Projeto PAS II</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript">
+		   $(document).ready(function() {
+		      $("#driver").click(function(event){
+		          $.getJSON('http://bolaoshow.herokuapp.com/service/clubes', function(jd) {
+		             $('#stage').html('<p> clube: ' + jd.clube + '</p>');
+		             $('#stage').append('<p>escudo : ' + jd.escudo+ '</p>');
+		             $('#stage').append('<p> nome: ' + jd.nome+ '</p>');
+		          });
+		      });
+		   });
+   </script>
+
+		
+		
+	</head>
+	
+	
+	<body>
+
+		<div id="site">
+			<header id="topo">
+				<font color="#FFFFFF" > </font>
+				<h1 > Projeto PAS II - Diego e Max</h1>
+			</header>
+			
+			<nav id="menu">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="bolao.html">Bolão</a></li>
+					<li><a href="ranking.html">Ranking</a></li>
+					<li><a href="apostas.html">Apostas</a></li>
+					<li><a href="clubes.html">Clubes</a></li>
+					<li><a href="resultados.html">Resultados dos Jogos</a></li>
+					<li><a href="perfil.html">Perfil</a></li>
+					<li><a href="TelaAdmin.html">Administrador</a></li>
+					<li><a href="mapa.html">Mapa do Site</a></li>					
+				</ul>
+			</nav>
+			<section id="conteudo">
+				<header>
+					<h2>Clubes</h2>
+	 		  <div id="stage" style="background-color:blue;">
+        	  		
+	  		 </div>
+	   		<input type="button" id="driver" value="Mostrar Clubes" />
+					
+				</header>
+				<script type="text/javascript">
+					function Nova()
+					{
+						location.href="Cadastro.html"
+					}
+				</script>
+
+				<article>
+					
+				<article>
+								
+											
+			
+				<article>
+			
+				</article>
+				
+			</section>	
+			
+			<aside>
+			
+			</aside>		
+			<footer>
+				Diego e Max
+			</footer>		
+		</div>
+	</body>
+
+</html>
